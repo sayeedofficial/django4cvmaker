@@ -5,26 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sapns-serif;
+      }
+    </style>
   </head>
   <body>
-    <h2>{{user_profile.name}}</h2>
-    <h2>{{user_profile.email}}</h2>
-    <h2>{{user_profile.phone}}</h2>
-    <hr/>
-    <br>
-    <h2>Summary</h3>
-    <p>{{user_profile.summary}} </p>
-    <hr/>
-    <h2> Skills </h2>
-    <p>{{user_profile.skills}} </p>
-    <hr/>
-    <h2>Education</h2>
+    <h4>
+      <i class="fas fa-user"></i> {{user_profile.name}}
+      <i class="fas fa-envelope-square"></i> {{user_profile.email}}
+      <i class="fas fa-phone-square-alt"></i> {{user_profile.phone}}
+	  <i class="fab fa-linkedin"></i> {{user_profile.linkedin}}
+    </h4>
+    <hr />
+    <h4><i class="fas fa-list-alt"></i> Summary</h4>
+    <p>{{user_profile.summary}}</p>
+    <hr />
+    <h4><i class="fas fa-tools"></i> Skills</h4>
+    <p>{{user_profile.skills}}</p>
+    <hr />
+    <h4><i class="fas fa-university"></i> Education</h4>
     <ul>
-        <li>{{user_profile.school}}</li>
-        <li>{{user_profile.university}} </li>
+      <li>class 10 {{user_profile.class10}}</li>
+      <li>class 12 {{user_profile.class12}}</li>
+      <li>{{user_profile.university}}</li>
     </ul>
-    <hr/>
-    <h2>Work Expierience</h2>
-    <p> {{user_profile.previous_work}}</p>
+    <hr />
+    <h4><i class="fas fa-briefcase"></i> Work Expierience</h4>
+    <p>{{user_profile.previous_work}}</p>
+    <hr />
+    <h4><i class="fas fa-project-diagram"></i> Projects</h4>
+    <p>{{user_profile.projects}}</p>
   </body>
 </html>

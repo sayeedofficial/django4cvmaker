@@ -13,14 +13,17 @@ def accept(request):
         name = request.POST.get("name", "")
         email = request.POST.get("email", "")
         phone = request.POST.get("phone", "")
+        linkedin = request.POST.get("linkedin", "")
         summary = request.POST.get("summary", "")
         degree = request.POST.get("degree", "")
-        school = request.POST.get("school", "")
+        class10 = request.POST.get("class10", "")
+        class12 = request.POST.get("class12", "")
         university = request.POST.get("university", "")
         previous_work = request.POST.get("previous_work", "")
+        projects = request.POST.get("projects", "")
         skills = request.POST.get("skills", "")
-        profile = Profile(name=name, email=email, phone=phone, summary=summary, degree=degree,
-                          school=school, university=university, previous_work=previous_work, skills=skills)
+        profile = Profile(name=name, email=email, phone=phone,linkedin=linkedin, summary=summary, degree=degree,
+                          class10=class10,class12=class12, university=university, previous_work=previous_work, skills=skills,projects=projects)
         profile.save()
     return render(request, 'pdf/accept.html')
 

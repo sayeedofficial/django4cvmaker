@@ -29,6 +29,4 @@ Install my-project with pip
  step4 :  python manage.py migrate
  step5 :  python manage.py runserver
 ```
-```create-super-user
- step1 : python manage.py createsuperuser
-```
+
